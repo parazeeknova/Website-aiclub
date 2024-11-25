@@ -25,8 +25,13 @@ import Cursor from "./components/Cursor/cursor.jsx";
 import LandingPage from "./components/LandingPage/LandingPage.jsx";
 import LandingPageMob from "./components/LandingPage/LandingPageMob.jsx";
 import Menu from "./components/Menu/menu.jsx";
-
+import REACTGA from 'react-ga'
 const App = () => {
+
+  const trackingID = "G-8C0ZGXJG38"
+  REACTGA.initialize(trackingID)
+
+
   const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
   const [loading, setLoading] = useState(true);
   const mainContentRef = useRef(null);
