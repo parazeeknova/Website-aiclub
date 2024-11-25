@@ -11,6 +11,7 @@ import BackButton from '../backButton/backButton.jsx'
 import Cursor from '../Cursor/cursor.jsx';
 const membersPage = () => {
     gsap.registerPlugin(ScrollTrigger);
+    const [contReady, setContReady] = useState(false)
     useGSAP(() => {
         const H = document.querySelector("#membersBox").clientWidth;
         let mm = gsap.matchMedia();
@@ -40,60 +41,61 @@ const membersPage = () => {
                 },
             });
         });
-    })
+    }, [contReady])
 
     const [team, setTeam] = useState('')
     let [searchParams, setSearchParams] = useSearchParams();
     useEffect(() => {
         setTeam(searchParams.get("team"))
-        var len = data[searchParams.get("team")].length
-        if (len % 2 != 0) {
-            len = len + 1
-            for (let i = 0; i < len; i++) {
-                if (!document.getElementById(`wave${i}`)) {
-                    if (i == 0) {
-                        document.getElementById('wave').innerHTML += `
+        async function renderMembers() {
+            var len = data[searchParams.get("team")].length
+            if (len % 2 != 0) {
+                len = len + 1
+                for (let i = 0; i < len; i++) {
+                    if (!document.getElementById(`wave${i}`)) {
+                        if (i == 0) {
+                            document.getElementById('wave').innerHTML += `
                         <div className="waveBox">
                         <img id="wave${i}" style="position: relative;" src="/PublicAssets/teamWave.svg" alt="" key=${i} />
                         </div>
                         `
-                    }
-                    else {
-                        let leftVal = i * 28
-                        document.getElementById('wave').innerHTML += `
+                        }
+                        else {
+                            let leftVal = i * 28
+                            document.getElementById('wave').innerHTML += `
                         <div className="waveBox">
                         <img id="wave${i}" style="position: relative;left: -${leftVal}px;" src="/PublicAssets/teamWave.svg" alt="" key=${i} />
                         </div>
                         `
+                        }
                     }
                 }
             }
-        }
-        else {
-            for (let i = 0; i < len; i++) {
-                if (!document.getElementById(`wave${i}`)) {
-                    if (i == 0) {
-                        document.getElementById('wave').innerHTML += `
+            else {
+                for (let i = 0; i < len; i++) {
+                    if (!document.getElementById(`wave${i}`)) {
+                        if (i == 0) {
+                            document.getElementById('wave').innerHTML += `
                         <div className="waveBox">
                         <img id="wave${i}" style="position: relative;" src="/PublicAssets/teamWave.svg" alt="" key=${i} />
                         </div>
                         `
-                    }
-                    else {
-                        let leftVal = i * 28
-                        document.getElementById('wave').innerHTML += `
+                        }
+                        else {
+                            let leftVal = i * 28
+                            document.getElementById('wave').innerHTML += `
                         <div className="waveBox">
                         <img id="wave${i}" style="position: relative;left: -${leftVal}px;" src="/PublicAssets/teamWave.svg" alt="" key=${i} />
                         </div>
                         `
+                        }
                     }
                 }
             }
-        }
-        data[searchParams.get("team")].forEach((e, i) => {
-            if (!document.getElementById(`member${i}`)) {
-                if (i == 0) {
-                    document.getElementById('membersBox').innerHTML += `
+            data[searchParams.get("team")].forEach((e, i) => {
+                if (!document.getElementById(`member${i}`)) {
+                    if (i == 0) {
+                        document.getElementById('membersBox').innerHTML += `
                     <div className="member" id="member${i}" style="left:70px;flex-direction: column-reverse;bottom:0px">
                     <div id="teamDetailCont">
                         <div id="memName">${e.name}</div>
@@ -104,12 +106,12 @@ const membersPage = () => {
                     </div>
                     </div>
                     `
-                }
-                else {
-                    var bottom = i % 2 == 0 ? 0 : -250
-                    var colDirection = i % 2 != 0 ? 'column' : 'column-reverse'
-                    var Left = Number(document.getElementById(`member${i - 1}`).style.left.replace('px', '')) + 135
-                    document.getElementById('membersBox').innerHTML += `
+                    }
+                    else {
+                        var bottom = i % 2 == 0 ? 0 : -250
+                        var colDirection = i % 2 != 0 ? 'column' : 'column-reverse'
+                        var Left = Number(document.getElementById(`member${i - 1}`).style.left.replace('px', '')) + 135
+                        document.getElementById('membersBox').innerHTML += `
                     <div className="member" id="member${i}" style="left:${Left}px;flex-direction: ${colDirection};bottom:${bottom}px">
                     <div id="teamDetailCont">
                         <div id="memName">${e.name}</div>
@@ -120,10 +122,11 @@ const membersPage = () => {
                     </div>
                     </div>
                     `
+                    }
                 }
-            }
-        });
-
+            });
+        }
+        renderMembers().then(()=>setContReady(true))
     }, [searchParams])
     return (
         <>

@@ -85,12 +85,20 @@ const About = () => {
                         </div>
                         <div className="sideBottomBox">
                             <div className="cont1">
-                                <div className="subCont11"></div>
-                                <div className="subCont12"></div>
+                                <div className="subCont11">
+                                    <h4>Why Join the AI Club ?</h4>
+                                    <p>Explore AI through hackathons, workshops, speaker sessions, and more. Learn, innovate, and connect with AI enthusiasts!</p>
+                                </div>
+                                <div className="subCont12">
+                                    <h4>Connect With Us</h4>
+                                    <p>Have questions or want to join the AI journey? Connect with us for updates, events, and exciting opportunities in AI.</p>
+                                </div>
                             </div>
                             <div className="cont2">
-                                <div className="subCont21"></div>
-                                <div className="subCont22"></div>
+                                <div className="subCont21">
+                                    <h4>Our Recent Events</h4>
+                                    <p>AIConic 2.0 was an inspiring event where we explored the world of cutting-edge technologies. Expert speakers shared insights on machine learning, deep learning, large language models (LLMs), and much more, sparking curiosity and innovation among attendees.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -115,7 +123,7 @@ const About = () => {
                                 <div className="istatBox statBox1">
                                     <div className="purplayer"></div>
                                     <div className="statName statName1">Members Community</div>
-                                    <div className="statCount statCount1">280 +</div>
+                                    <div className="statCount statCount1">2000 +</div>
                                 </div>
                                 <div className="istatBox statBox2">
                                     <div className="greenlayer"></div>
@@ -126,13 +134,13 @@ const About = () => {
                             <div className="row2">
                                 <div className="istatBox statBox3">
                                     <div className="greenlayer"></div>
-                                    <div className="statName statName3">Events Conducted</div>
-                                    <div className="statCount statCount3">40 +</div>
+                                    <div className="statName statName3">Total Audience Footfall</div>
+                                    <div className="statCount statCount3">15000</div>
                                 </div>
                                 <div className="istatBox statBox4">
                                     <div className="purplayer"></div>
                                     <div className="statName statName4">Competitions</div>
-                                    <div className="statCount statCount4">5 +</div>
+                                    <div className="statCount statCount4">9 +</div>
                                 </div>
                             </div>
                         </div>

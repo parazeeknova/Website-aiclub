@@ -7,28 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const GallerySection = () => {
   const navigate = useNavigate();
-  const [galleryData, setGalleryData] = useState([]);
-
-  useEffect(() => {
-    // Add the base URL for the public directory
-    const loadGalleryData = async () => {
-      try {
-        const response = await fetch("/Data/gallery.json");
-        const data = await response.json();
-        // Transform the data to include the full path
-        const transformedData = data.map((item) => ({
-          ...item,
-          src: `/gallerysection/${item.src.split("/").pop()}`,
-        }));
-        setGalleryData(transformedData);
-      } catch (error) {
-        console.error("Error loading gallery data:", error);
-      }
-    };
-
-    loadGalleryData();
-  }, []);
-
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     gsap.to("#galleryBox1", {
@@ -132,9 +110,7 @@ const GallerySection = () => {
           onClick={handleBoxClick}
           className="boximg1"
           style={{
-            backgroundImage: galleryData[0]
-              ? `url(${galleryData[0].src})`
-              : "none",
+            backgroundImage:`url('/gallerysection/IMG_6499.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -147,9 +123,7 @@ const GallerySection = () => {
           onClick={handleBoxClick}
           className="boximg1"
           style={{
-            backgroundImage: galleryData[1]
-              ? `url(${galleryData[1].src})`
-              : "none",
+            backgroundImage:`url('/gallerysection/IMG_6502.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -159,9 +133,7 @@ const GallerySection = () => {
           className="boximg2"
           onClick={handleBoxClick}
           style={{
-            backgroundImage: galleryData[5]
-              ? `url(${galleryData[5].src})`
-              : "none",
+            backgroundImage:`url('/gallerysection/IMG_6503.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -171,9 +143,7 @@ const GallerySection = () => {
           onClick={handleBoxClick}
           className="boximg3"
           style={{
-            backgroundImage: galleryData[2]
-              ? `url(${galleryData[2].src})`
-              : "none",
+            backgroundImage:`url('/gallerysection/IMG_6500.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -185,9 +155,7 @@ const GallerySection = () => {
           onClick={handleBoxClick}
           className="boximg1"
           style={{
-            backgroundImage: galleryData[3]
-              ? `url(${galleryData[3].src})`
-              : "none",
+            backgroundImage:`url('/gallerysection/IMG_6504.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -197,9 +165,7 @@ const GallerySection = () => {
           onClick={handleBoxClick}
           className="boximg2"
           style={{
-            backgroundImage: galleryData[4]
-              ? `url(${galleryData[4].src})`
-              : "none",
+            backgroundImage:`url('/gallerysection/IMG_6501.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

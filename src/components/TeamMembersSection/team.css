@@ -41,7 +41,7 @@
   width: 100%;
   border: 3px solid #3b3b3b;
   margin-bottom: 25px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 0.9 / 1;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -212,7 +212,7 @@
   #brand_col {
     width: 95vw;
     margin-top: 1em;
-    gap: 1.1em;
+    gap: 10px;
   }
 
   #brand_col ul {
@@ -227,7 +227,7 @@
     width:100%;
     border-radius: 10px;
     margin-bottom: 20px;
-    aspect-ratio: 0.6 / 1;
+    aspect-ratio: 0.5 / 1;
     height: auto;
     
   }

@@ -23,3 +23,13 @@
   letter-spacing: 2px;
   padding-top: 10px;
 }
+@media screen and (max-width: 600px) {
+  #galleryHeading{
+    font-size: 20px;
+    top: 5%;
+    left: 13%;
+  }
+  .grid-container{
+    padding-top: 90px;
+  }
+}

@@ -140,7 +140,7 @@ const BrandingSection = () => {
 
   const renderListItems = (items) => {
     return items.map((item, index) => (
-      <Link to={item.team != false ? `/members?team=${item.team}` : null} style={{ textDecoration: "none" }}>
+      <Link to={item.team != false ? `/members?team=${item.team=="pannel1" || item.team=="pannel2" || item.team=="pannel3" || item.team=="pannel4" || item.team=="pannel5" || item.team=="pannel6" ?"board": item.team}` : null} style={{ textDecoration: "none" }}>
         <li key={index}>
           <div>
             <h3>{item.name}</h3>

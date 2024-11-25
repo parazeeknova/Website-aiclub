@@ -6,7 +6,7 @@ function LandingPage() {
             <div className="landingMain">
                 <div className="box1row1">
                     AI CLUB
-                    <img srcSet="/PublicAssets/club_dark.webp" alt="" srcset="" />
+                    <img src="/PublicAssets/club_dark.webp" alt="" srcset="" />
                 </div>
                 <div className="mainBox1">
                     <div className="box1row2">
@@ -14,13 +14,13 @@ function LandingPage() {
                             The AI Club at VIT Bhopal is a hub for innovators, creators, and dreamers. From ideathons to annual conclaves, we drive the frontier of Artificial Intelligence through learning, collaboration, and action.
                         </div>
                         <div className="box1row2side">
-                            <img srcSet="/PublicAssets/landRing.svg" alt="" />
+                            <img src="/PublicAssets/landRing.svg" alt="" />
                         </div>
                     </div>
                     <div className="box1row3">
                         <div className="box1row3side"></div>
                         <div className="box2row2col1">
-                            <img srcSet="/PublicAssets/robot.webp" alt="" srcset="" />
+                            <img src="/PublicAssets/robot.webp" alt="" srcset="" />
                         </div>
                     </div>
                 </div>

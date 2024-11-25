@@ -72,3 +72,13 @@
   object-fit: cover;
   border-radius: 2rem;
 }
+@media screen and (max-width: 600px) {
+  .gallery-title{
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+  .gallery-grid{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+}

@@ -49,14 +49,24 @@ const App = () => {
       timeline
         .to(mainContentRef.current, {
           opacity: 1,
-          duration: 0.6,
+          duration: 0.3,
           ease: "power2.out",
         })
-        .fromTo(
-          mainContentRef.current.querySelectorAll(".content"),
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.5, stagger: 0.2, ease: "power2.out" }
-        );
+      const contentElements = mainContentRef.current.querySelectorAll(".content");
+      if (contentElements.length > 0) {
+        const timeline = gsap.timeline();
+        timeline
+          .to(mainContentRef.current, {
+            opacity: 1,
+            duration: 0.3,
+            ease: "power2.out",
+          })
+          .fromTo(
+            contentElements,
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.2, stagger: 0.2, ease: "power2.out" }
+          );
+      }
     }
   }, [loading]);
 
@@ -66,7 +76,7 @@ const App = () => {
       {!loading && (
         <div
           ref={mainContentRef}
-          style={{ opacity: 0, transition: "opacity 0.5s ease-in-out" }}
+          style={{ opacity: 0, transition: "opacity 0.1s ease-in-out" }}
         >
           <Router>
             <Routes>

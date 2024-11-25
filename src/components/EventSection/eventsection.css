@@ -255,7 +255,6 @@
     flex-direction: column;
     transform: none;
     width: 90vw;
-    margin: 0 0 0 12px;
     display: flex;
     justify-content: center; /* Centering content */
     align-items: center; /* Centering content */
