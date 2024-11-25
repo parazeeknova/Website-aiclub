@@ -17,15 +17,14 @@
 }
 
 .slider {
-  
+
   display: flex;
   position: relative;
   gap: 44px;
   width: 800px;
   height: 100%;
   transform-style: preserve-3d;
-  transform: perspective(1500px) rotateY(-15deg) rotateZ(-6deg)
-    translateX(-25px) translateY(-100px);
+  transform: perspective(1500px) rotateY(-15deg) rotateZ(-6deg) translateX(-25px) translateY(-100px);
 }
 
 .cardbox {
@@ -75,12 +74,10 @@
   aspect-ratio: 1;
   --o: calc(50% * tan(-20.5deg));
   --p: calc(50% * tan(-42.5deg));
-  clip-path: polygon(
-    var(--o) 50%,
-    50% var(--p),
-    calc(100% - var(--o)) 50%,
-    50% calc(100% - var(--p))
-  );
+  clip-path: polygon(var(--o) 50%,
+      50% var(--p),
+      calc(100% - var(--o)) 50%,
+      50% calc(100% - var(--p)));
 }
 
 #bannerImage {
@@ -138,7 +135,7 @@
 }
 
 .eventName {
-  
+
   font-size: 50px;
   font-family: inter;
   letter-spacing: 3px;
@@ -247,8 +244,10 @@
     flex-direction: column;
     transform: scaleX(-1);
     height: auto;
-    justify-content: center; /* Centering the content vertically */
-    align-items: center; /* Centering the content horizontally */
+    justify-content: center;
+    /* Centering the content vertically */
+    align-items: center;
+    /* Centering the content horizontally */
   }
 
   .slider {
@@ -256,8 +255,10 @@
     transform: none;
     width: 90vw;
     display: flex;
-    justify-content: center; /* Centering content */
-    align-items: center; /* Centering content */
+    justify-content: center;
+    /* Centering content */
+    align-items: center;
+    /* Centering content */
   }
 
   .slider span {
@@ -300,6 +301,9 @@
     border-radius: 10px;
     height: 50px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .cardbox {
@@ -309,8 +313,10 @@
   .eventDetails {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the event details */
-    justify-content: center; /* Vertically center */
+    align-items: center;
+    /* Center the event details */
+    justify-content: center;
+    /* Vertically center */
     text-align: center;
   }
 
@@ -319,24 +325,34 @@
     width: 100%;
     margin-bottom: 10px;
     padding: 0;
-    text-align: center; /* Centering text */
+    text-align: center;
+    /* Centering text */
   }
 
   .viewEvent {
-    width: 80%; /* Increase width for button */
-    margin-left: 0; /* Adjust to center the button */
+    width: 80%;
+    /* Increase width for button */
+    margin-left: 0;
+    /* Adjust to center the button */
     padding: 0;
     display: flex;
-    justify-content: center; /* Center the button */
+    justify-content: center;
+    /* Center the button */
   }
 
   .viewEvent button {
     font-size: 15px;
-    padding: 10px 20px; /* Adjust padding for a larger button */
-    width: 100%; /* Make it take up the full width of its container */
-    text-align: center; /* Ensure button text is centered */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflowing text */
-    text-overflow: ellipsis; /* Add ellipsis if the text is too long */
+    padding: 10px 20px;
+    /* Adjust padding for a larger button */
+    width: 100%;
+    /* Make it take up the full width of its container */
+    text-align: center;
+    /* Ensure button text is centered */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    overflow: hidden;
+    /* Hide overflowing text */
+    text-overflow: ellipsis;
+    /* Add ellipsis if the text is too long */
   }
 }
