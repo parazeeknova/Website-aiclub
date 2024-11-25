@@ -14,7 +14,7 @@ const EventsSection = () => {
     var vw = window.innerHeight;
     var sliderWidth = document.querySelector(".slider").scrollWidth;
 
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 769) {
       var vw = window.innerHeight;
       var sliderWidth = document.querySelector(".slider").scrollWidth;
       var cardHeight = document.querySelector("span").clientHeight;

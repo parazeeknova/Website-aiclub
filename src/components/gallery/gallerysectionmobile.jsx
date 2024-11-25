@@ -5,31 +5,31 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useNavigate } from "react-router-dom";
 
-/**
- * @typedef {Object} GalleryItem
- * @property {string} id
- * @property {string} src
- * @property {string} alt
- */
+// /**
+//  * @typedef {Object} GalleryItem
+//  * @property {string} id
+//  * @property {string} src
+//  * @property {string} alt
+//  */
 
 const GallerySectionMobile = () => {
   const navigate = useNavigate();
-  /** @type {GalleryItem[]} */
-  const [galleryData, setGalleryData] = useState([]);
+  // /** @type {GalleryItem[]} */
+  // const [galleryData, setGalleryData] = useState([]);
 
-  useEffect(() => {
-    const loadGalleryData = async () => {
-      try {
-        const response = await fetch("/Data/gallery.json");
-        const data = await response.json();
-        setGalleryData(data);
-      } catch (error) {
-        console.error("Error loading gallery data:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const loadGalleryData = async () => {
+  //     try {
+  //       const response = await fetch("/Data/gallery.json");
+  //       const data = await response.json();
+  //       setGalleryData(data);
+  //     } catch (error) {
+  //       console.error("Error loading gallery data:", error);
+  //     }
+  //   };
 
-    loadGalleryData();
-  }, []);
+  //   loadGalleryData();
+  // }, []);
 
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
@@ -100,9 +100,7 @@ const GallerySectionMobile = () => {
           onClick={handleBoxClick}
           className="boximg1"
           style={{
-            backgroundImage: galleryData[0]
-              ? `url(${galleryData[0].src})`
-              : "none",
+            backgroundImage: `url('/gallerysection/IMG_6499.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -112,9 +110,7 @@ const GallerySectionMobile = () => {
           onClick={handleBoxClick}
           className="boximg2"
           style={{
-            backgroundImage: galleryData[1]
-              ? `url(${galleryData[1].src})`
-              : "none",
+            backgroundImage: `url('/gallerysection/IMG_6502.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -126,9 +122,7 @@ const GallerySectionMobile = () => {
           onClick={handleBoxClick}
           className="boximg1"
           style={{
-            backgroundImage: galleryData[5]
-              ? `url(${galleryData[5].src})`
-              : "none",
+            backgroundImage: `url('/gallerysection/IMG_6503.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -143,9 +137,7 @@ const GallerySectionMobile = () => {
           <div
             className="subBoximg1"
             style={{
-              backgroundImage: galleryData[3]
-                ? `url(${galleryData[3].src})`
-                : "none",
+              backgroundImage: `url('/gallerysection/IMG_6500.webp')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -153,9 +145,7 @@ const GallerySectionMobile = () => {
           <div
             className="subBoximg2"
             style={{
-              backgroundImage: galleryData[4]
-                ? `url(${galleryData[4].src})`
-                : "none",
+              backgroundImage: `url('/gallerysection/IMG_6504.webp')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -166,9 +156,7 @@ const GallerySectionMobile = () => {
           onClick={handleBoxClick}
           className="boximg2"
           style={{
-            backgroundImage: galleryData[2]
-              ? `url(${galleryData[2].src})`
-              : "none",
+            backgroundImage: `url('/gallerysection/IMG_6501.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

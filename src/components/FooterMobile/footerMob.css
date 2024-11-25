@@ -18,6 +18,8 @@
   margin-top: 20px;
   position: relative;
   gap: 10px;
+  z-index: 100000000000000000000;
+  background-color: #131315;
 }
 
 .mob_footCont1 {

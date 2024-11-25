@@ -34,7 +34,7 @@ const App = () => {
   useEffect(() => {
     var lastWidth = window.innerWidth;
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 480);
+      setIsMobile(window.innerWidth < 768);
       if (window.innerWidth !== lastWidth) {
         window.location.reload();
       }

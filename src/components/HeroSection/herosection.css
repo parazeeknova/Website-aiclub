@@ -229,6 +229,8 @@
   .event-container {
     flex-direction: column-reverse;
     height: 90%;
+    justify-content: center;
+    gap: 10px;
   }
 
   .heroTitle {
@@ -239,12 +241,13 @@
 
   .left-event-container {
     width: 100%;
+
   }
 
   .left-event-container p {
     text-align: center;
     padding: 10px 10px;
-    font-size: 23px;
+    font-size: 1rem;
   }
 
   .register-button {

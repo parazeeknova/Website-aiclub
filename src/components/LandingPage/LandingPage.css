@@ -327,10 +327,11 @@
     height: 50%;
     padding-bottom: 0px;
     padding-top: 0px;
-    font-size: 80%;
+    font-size: 0.7rem;
     font-weight: 500;
     align-items: center;
     border-top-right-radius: 15px;
+    color: black;
   }
 
   .box1row2side {
