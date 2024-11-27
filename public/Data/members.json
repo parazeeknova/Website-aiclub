@@ -70,7 +70,7 @@
     {
       "name": "Aryan Pahari",
       "img": "/membersIMG/Technical Team/Aryan Pahari (23BAI10337) Technical Team_.webp",
-      "msg": "AIC '24"
+      "msg": "Before we master artificial intelligence, maybe we should focus on natural stupidity—it seems to be winning the race"
     },
     {
       "name": "Aditya Khamitkar",
@@ -106,7 +106,18 @@
       "name": "Shreya Agrawal",
       "img": "/membersIMG/Technical Team/sh_agrawal - Shreya Agrawal 23BAI11407.webp",
       "msg": "You learn from the experienced what mistakes can't teach"
+    },
+    {
+      "name": "Allen Simeon",
+      "img": "/membersIMG/Technical Team/Allen Simeon.webp",
+      "msg": "Fearless ambition fuels unstoppable progress."
+    },
+    {
+      "name": "Tanay Semwal",
+      "img": "/membersIMG/Technical Team/TanaySemwal.webp",
+      "msg": "Hardwork pays off eventually, but procrastination pays off right now"
     }
+    
   ],
   "event": [
     {
@@ -202,7 +213,7 @@
       "msg": "AIC '24"
     },
     {
-      "name": "Kirit Gupta",
+      "name": "Kriti Gupta",
       "img": "/membersIMG/Editorial Team/KRITIGUPTA_23BCE10744._EDITORIAL - Kriti Gupta 23bce10744.webp",
       "msg": "Fueled by caffeine and curiosity."
     }
@@ -426,22 +437,22 @@
     {
       "name": "Punit Kaushik",
       "img": "/membersIMG/punit.webp",
-      "msg": "AIC '24"
+      "msg": "You will never reach the banana if you do not have the courage to climb."
     },
     {
       "name": "Anushka Singh",
       "img": "/membersIMG/anushka.webp",
-      "msg": "AIC '24"
+      "msg": "Second in command, making chaos look so grand."
     },
     {
-      "name": "Virat Shrivastava",
+      "name": "Virat Srivastava",
       "img": "/membersIMG/virat.webp",
       "msg": "With shared visions , progress knows no limit."
     },
     {
       "name": "Aarushi",
       "img": "/membersIMG/aarushi.webp",
-      "msg": "AIC `24"
+      "msg": "Thank You, Beyonce!!"
     },
     {
       "name": "Arpit Sengar",
@@ -451,7 +462,7 @@
     {
       "name": "Tarun Nichwani",
       "img": "/membersIMG/tarun.webp",
-      "msg": "AIC '24"
+      "msg": "Everything that drowns me makes me wanna fly."
     }
   ]
 }

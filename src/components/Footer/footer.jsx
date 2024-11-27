@@ -40,7 +40,7 @@ export default function footer() {
           <a target="_blank" href="https://github.com/aiclubvitbhopal">
             Github
           </a>
-          <a target="_blank" href="#">
+          <a target="_blank" href="https://discord.com/invite/cBcGQW3eUP">
             Discord
           </a>
         </div>

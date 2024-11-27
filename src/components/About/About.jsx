@@ -162,7 +162,7 @@ const About = () => {
                                     <img src={github} alt="G" />
                                 </div>
                             </a>
-                            <a target='_blank' href="https://discord.com/invite/CnhaxT8k">
+                            <a target='_blank' href="https://discord.com/invite/cBcGQW3eUP">
                                 <div className="circle">
                                     <img src={discord} alt="D" />
                                 </div>
@@ -198,7 +198,7 @@ const About = () => {
                                         <img src={github} alt="G" />
                                     </div>
                                 </a>
-                                <a target='_blank' href="https://discord.com/invite/CnhaxT8k">
+                                <a target='_blank' href="https://discord.com/invite/cBcGQW3eUP">
                                     <div className="circle">
                                         <img src={discord} alt="D" />
                                     </div>

@@ -67,6 +67,16 @@ const App = () => {
             { opacity: 1, y: 0, duration: 0.2, stagger: 0.2, ease: "power2.out" }
           );
       }
+      setTimeout(() => {
+        console.clear()
+        console.log(`
+             /￣ヽ
+           ∠)_・/  ∧_∧ 　　 
+            /  /  ( ･ω･) 　　
+           (  ￣ ￣∪ ∪￣) 
+            ~~~~~~~~~~~~
+          `)
+      }, 1000);
     }
   }, [loading]);
 

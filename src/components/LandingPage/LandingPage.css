@@ -79,16 +79,17 @@
   background-image: radial-gradient(circle, #383c3d36 2px, transparent 1px);
   background-size: 20px 20px;
   background-attachment: fixed;
+  contain: content;
 }
 
-.box1row2main::before {
+/* .box1row2main::before {
   content: '';
   position: absolute;
   width: 50px;
   height: 100%;
   background: black;
   left: 70%;
-}
+} */
 
 .vertxt {
   position: absolute;
@@ -97,6 +98,13 @@
   font-family: 'Inter';
   transform: rotate(270deg);
   font-size: 15px;
+  width: 44%;
+  height: 50px;
+  background: black;
+  left: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box1row2side {
@@ -111,7 +119,8 @@
   align-items: center;
   justify-content: center;
 }
-.box1row2side > img{
+
+.box1row2side>img {
   width: 140px;
   animation: landRingRotate 10s linear infinite;
 }
@@ -201,6 +210,7 @@
   background-image: radial-gradient(circle, #383c3d36 2px, transparent 1px);
   background-size: 20px 20px;
   background-attachment: fixed;
+  font-weight: 700;
 }
 
 .box2row2 {
@@ -328,7 +338,7 @@
     padding-bottom: 0px;
     padding-top: 0px;
     font-size: 0.7rem;
-    font-weight: 500;
+    font-weight: 700;
     align-items: center;
     border-top-right-radius: 15px;
     color: black;
