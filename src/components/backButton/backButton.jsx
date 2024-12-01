@@ -20,6 +20,10 @@ function backButton(props) {
         if (!props.textDisplay) {
             document.getElementById('backtxt').style.display = 'none'
         }
+        if (props.data) {
+            document.getElementById('backtxt').innerText = props.data
+        }
+        
     },[])
   return (
     <div onClick={()=>history.back()} id='backButtonWrap' className='backButtonWrap'>

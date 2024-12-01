@@ -36,7 +36,7 @@ const App = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
       if (window.innerWidth !== lastWidth) {
-        window.location.reload();
+        window.location.pathname == "/magazine" ? "" : window.location.reload();
       }
       lastWidth = window.innerWidth;
     };
@@ -67,16 +67,16 @@ const App = () => {
             { opacity: 1, y: 0, duration: 0.2, stagger: 0.2, ease: "power2.out" }
           );
       }
-      setTimeout(() => {
-        console.clear()
-        console.log(`
-             /￣ヽ
-           ∠)_・/  ∧_∧ 　　 
-            /  /  ( ･ω･) 　　
-           (  ￣ ￣∪ ∪￣) 
-            ~~~~~~~~~~~~
-          `)
-      }, 1000);
+      // setTimeout(() => {
+      //   console.clear()
+      //   console.log(`
+      //        /￣ヽ
+      //      ∠)_・/  ∧_∧ 　　 
+      //       /  /  ( ･ω･) 　　
+      //      (  ￣ ￣∪ ∪￣) 
+      //       ~~~~~~~~~~~~
+      //     `)
+      // }, 1000);
     }
   }, [loading]);
 

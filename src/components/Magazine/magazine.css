@@ -18,6 +18,7 @@
   align-items: center;
   justify-content: center;
   padding: 50px;
+  padding-top: 30px;
 }
 
 .nav-bar {
@@ -27,7 +28,7 @@
   display: flex;
   justify-content: space-between;
   margin: 2vh 0 0 0;
-  padding: 10px 30px;
+  padding: 3px 15px;
   background-color: #161515;
   color: #fff;
   border-radius: 10px;
@@ -37,7 +38,7 @@
   background-color: transparent;
   color: #fff;
   border: none;
-  padding: 5px 10px;
+  padding: 5px 5px;
   cursor: pointer;
 }
 
@@ -130,8 +131,6 @@
   color: white;
   font-weight: 400;
   padding: 10px;
-  margin-right: 20px;
-  margin-top: 4.5px;
   border: none;
 }
 
@@ -139,4 +138,45 @@
   background-color: #c9c9c9;
   color: black;
   border-radius: 10px;
+}
+
+
+#magLoader{
+  width: 100vw;
+  height: 100vh;
+  background-color: #161515e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: neue;
+  font-size: 5vw;
+  letter-spacing: 2px;
+  position: absolute;
+  z-index: 1000;
+  pointer-events: all
+}
+
+@media screen and (max-width : 500px) {
+  .nav-bar{
+    top: 30px;
+  }
+  .bottom-bar{
+    padding: 5px 10px;
+  }
+}
+
+.backButtonWrap {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 5px;
+  font-family: inter;
+  font-size: large;
+  z-index: 1000000;
+  cursor: pointer;
 }
