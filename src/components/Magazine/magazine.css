@@ -180,3 +180,12 @@
   z-index: 1000000;
   cursor: pointer;
 }
+
+.react-pdf__message {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3vw;
+  width: max-content;
+}
