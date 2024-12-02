@@ -185,7 +185,7 @@ body {
   transition: opacity var(--transition-speed), transform var(--transition-speed);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-content.show {
   display: block;
   opacity: 1;
   transform: translateY(0);
@@ -225,8 +225,8 @@ body {
 
 .backButtonWrap {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 15px;
+  left: 15px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -263,14 +263,29 @@ body {
     padding: 40px 10px;
   }
 
+  .backButtonWrap {
+    top: 70px;
+    left: 10px;
+  }
+
   .magazine-scaler {
     max-width: 100%;
   }
 
-  .nav-bar,
-  .bottom-bar {
+  .nav-bar {
+    top: 10px;
     padding: 5px 12px;
     max-width: 95%;
+  }
+
+  .nav-bar button,
+  .middleButton span {
+    font-size: 14px;
+  }
+
+  .nav-bar svg {
+    width: 20px;
+    height: 20px;
   }
 
   .dropbtn {
@@ -312,6 +327,19 @@ body {
     width: 28px;
     height: 28px;
     padding: 5px;
+  }
+
+  .backButtonWrap {
+    top: 60px;
+  }
+
+  .backButtonWrap h5 {
+    font-size: 14px;
+  }
+
+  .backButtonWrap img {
+    width: 20px;
+    height: 20px;
   }
 }
 

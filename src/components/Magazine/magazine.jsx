@@ -62,6 +62,7 @@ function Flipbook() {
   const [pdf, setPdf] = useState(pdf3);
   const [scale, setScale] = useState(MIN_SCALE);
   const [isLoading, setIsLoading] = useState(true);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const book = useRef();
   const containerRef = useRef();
@@ -119,9 +120,26 @@ function Flipbook() {
     }
   }, [pdf]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isDropdownOpen && !event.target.closest('.dropdown')) {
+        setIsDropdownOpen(false);
+      }
+    };
+  
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
   const onDocumentLoadSuccess = useCallback(({ numPages }) => {
     setNumPages(numPages);
     setIsLoading(false);
+  }, []);
+
+  const toggleDropdown = useCallback(() => {
+    setIsDropdownOpen(prev => !prev);
   }, []);
 
   const goToPrevPage = useCallback(() => {
@@ -176,6 +194,30 @@ function Flipbook() {
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
     };
+  }
+
+  function BackButton(props) {
+    useEffect(() => {
+      const backButton = document.getElementById('backButtonWrap');
+      const backText = document.getElementById('backtxt');
+      
+      if (props.filter) {
+        backButton.style.filter = props.filter;
+      }
+      if (!props.textDisplay) {
+        backText.style.display = 'none';
+      }
+      if (props.data) {
+        backText.innerText = props.data;
+      }
+    }, []);
+  
+    return (
+      <div onClick={() => window.location.href = '/'} id='backButtonWrap' className='backButtonWrap'>
+        <img src={backBut} alt="Back" srcSet="" />
+        <h5 id='backtxt'>Back</h5>
+      </div>
+    );
   }
 
   return (
@@ -264,14 +306,47 @@ function Flipbook() {
         </div>
 
         <div className="bottom-bar">
-          <div className="dropdown">
-            <button className="dropbtn" type="button">Change Edition</button>
-            <div className="dropdown-content">
-              <button className="edition" onClick={handleButtonClick1} type="button">Edition 1</button>
-              <button className="edition" onClick={handleButtonClick2} type="button">Edition 2</button>
-              <button className="edition" onClick={handleButtonClick3} type="button">Edition 3</button>
-            </div>
+        <div className="dropdown">
+          <button 
+            className="dropbtn" 
+            type="button"
+            onClick={toggleDropdown}
+          >
+            Change Edition
+          </button>
+          <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
+            <button 
+              className="edition" 
+              onClick={() => {
+                handleButtonClick1();
+                setIsDropdownOpen(false);
+              }} 
+              type="button"
+            >
+              Edition 1
+            </button>
+            <button 
+              className="edition" 
+              onClick={() => {
+                handleButtonClick2();
+                setIsDropdownOpen(false);
+              }} 
+              type="button"
+            >
+              Edition 2
+            </button>
+            <button 
+              className="edition" 
+              onClick={() => {
+                handleButtonClick3();
+                setIsDropdownOpen(false);
+              }} 
+              type="button"
+            >
+              Edition 3
+            </button>
           </div>
+        </div>
           <div className="zoom-controls">
             <button
               type="button"
